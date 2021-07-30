@@ -2,7 +2,11 @@ import java.util.ArrayList;
 
 public class ResourceCentre {
 
-
+	
+	/**
+	 * 
+	 */
+	public static final int OPTION_VIEW = 1;
 	public static final int OPTION_ADD = 2;
 	public static final int OPTION_QUIT = 5;
 	public static void main(String[] args) {
@@ -22,7 +26,7 @@ public class ResourceCentre {
 			ResourceCentre.menu();
 			option = Helper.readInt("Enter an option > ");
 
-			if (option == 1) {
+			if (option == OPTION_VIEW) {
 				// View all items
 				ResourceCentre.viewAllCamcorder(camcorderList);
 				ResourceCentre.viewAllChromebook(chromebookList);
@@ -39,7 +43,7 @@ public class ResourceCentre {
 					Camcorder cc = inputCamcorder();
 					ResourceCentre.addCamcorder(camcorderList, cc);
 
-				} else if (itemType == OPTION_ADD) {
+				} else if (itemType == 2) {
 					// Add Chromebook
 					Chromebook cb = inputChromebook();
 					ResourceCentre.addChromebook(chromebookList, cb);
@@ -58,7 +62,7 @@ public class ResourceCentre {
 				if (itemType == 1) {
 					// Loan camcorder
 					ResourceCentre.loanCamcorder(camcorderList);
-				} else if (itemType == OPTION_ADD) {
+				} else if (itemType == 2) {
 					// Loan Chromebook
 					ResourceCentre.loanChromebook(chromebookList);
 				} else {
@@ -74,7 +78,7 @@ public class ResourceCentre {
 				if (itemType == 1) {
 					// Return camcorder
 					ResourceCentre.returnCamcorder(camcorderList);
-				} else if (itemType == OPTION_ADD) {
+				} else if (itemType == 2) {
 					// Return Chromebook
 					ResourceCentre.returnChromebook(chromebookList);
 				} else {
