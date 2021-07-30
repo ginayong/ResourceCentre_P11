@@ -6,6 +6,14 @@ public class ResourceCentre {
 	/**
 	 * 
 	 */
+	public static final int OPTION_RETURN = 4;
+	/**
+	 * 
+	 */
+	public static final int OPTION_LOAN = 3;
+	/**
+	 * 
+	 */
 	public static final int OPTION_VIEW = 1;
 	public static final int OPTION_ADD = 2;
 	public static final int OPTION_QUIT = 5;
@@ -52,7 +60,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == 3) {
+			} else if (option == OPTION_LOAN) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");			
 				itemTypeMenu();
@@ -69,7 +77,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == 4) {
+			} else if (option == OPTION_RETURN) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");				
 				itemTypeMenu();
